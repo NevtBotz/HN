@@ -118,7 +118,7 @@ let f = await fetch(`https://process.filestackapi.com/A7lMmfpoSTu3i5i7yBXeQz/asc
 let xc = await f.text()
 let caption = `${xc}`
 await conn.sendButton(m.chat, caption, author, null, [
-                ['Get Img', `${usedPrefix}get ${x.dest}`]
+                ['Get Img', `${usedPrefix}get ${url}`]
             ], m)
 }
 
