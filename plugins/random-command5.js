@@ -91,8 +91,7 @@ let q = m.quoted ? m.quoted : m
     let url = await uploadImage(img)
 
 let f = await fetch(`http://api.resmush.it/ws.php/?img=${url}`)
-let xc = await f.json()
-let x = xc.result
+let x = await f.json()
 let caption = `*Src:* ${x.src}
 *Size:* ${x.src_size}
 
