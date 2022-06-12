@@ -9,7 +9,7 @@ export async function before(m, { match }) {
 		let alias = Object.values(plugins).filter(v => v.alias && !v.disabled).map(v => v.alias).flat(1)
 		if (alias.includes(noPrefix)) return
 		let mean = didyoumean(noPrefix, alias)
-		if (mean) this.sendButton(m.chat, `Did you mean: ${usedPrefix + mean}?\n`, author, null, [
+		if (mean) this.sendButton(m.chat, `Did you mean: ${usedPrefix + mean}?\n`, wm, null, [
                 ['Yes', `${usedPrefix + mean} ${text}`],
                 ['No', usedPrefix + '?']
             ], m)

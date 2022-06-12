@@ -4,7 +4,8 @@ import fetch from 'node-fetch'
 let handler = async(m, { conn, groupMetadata, usedPrefix, text, args, command }) => {
 if (!text) throw 'Kata apa?'
 
-let x = await quotes(text)
+let pe = await quotes(text)
+let x = pe.getRandom()
   await conn.sendButton(m.chat, `*Quote:*
 ${x.quote}
 
